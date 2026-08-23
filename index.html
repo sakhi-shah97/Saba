@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>For Saba</title>
+<meta name="description" content="A little something for Saba, from Sakhi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient sound toggle, persistent -->
+  <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false" aria-label="Play our song">
+    <svg class="icon-note" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.4"/>
+    </svg>
+    <span class="sound-toggle__label">Our song</span>
+  </button>
+  <audio id="bgm" loop preload="none">
+    <source src="our-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ============ COVER ============ -->
+  <header class="cover" id="cover">
+    <div class="cover__media" role="img" aria-label="Sakhi and Saba on a date night"></div>
+    <div class="cover__scrim"></div>
+    <div class="embers" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="cover__content">
+      <p class="eyebrow">a little something for</p>
+      <h1 class="cover__name">Saba</h1>
+      <p class="cover__tagline">Two years since Joe &amp; The Juice, and I still can't believe my luck.</p>
+
+      <button class="begin-btn" id="beginBtn" type="button">
+        <span>Begin</span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ INTERACTIVE PROMPT ============ -->
+  <section class="prompt" id="prompt">
+    <div class="prompt__card reveal">
+      <p class="eyebrow">quick question</p>
+      <h2 class="prompt__question">How much do I love you today?</h2>
+
+      <div class="prompt__choices" id="promptChoices">
+        <button class="choice choice--a" id="choiceA" type="button">A lot</button>
+        <button class="choice choice--b" id="choiceB" type="button">More than that</button>
+      </div>
+
+      <div class="prompt__reveal" id="promptReveal">
+        <p class="prompt__answer">Correct answer.<br>More than that — every single day.</p>
+        <button class="continue-link" id="continueBtn" type="button">
+          <span>Keep going</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR STORY ============ -->
+  <section class="story" id="story">
+    <div class="section-head reveal">
+      <span class="ornament" aria-hidden="true">&#10086;</span>
+      <p class="eyebrow">our story</p>
+      <h2>How We Got Here</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__thread" aria-hidden="true"></div>
+
+      <article class="chapter reveal">
+        <div class="chapter__media">
+          <img src="portrait-saba.jpg" alt="Saba, smiling" loading="lazy">
+        </div>
+        <div class="chapter__text">
+          <p class="chapter__label">Where it began</p>
+          <h3>Joe &amp; The Juice</h3>
+          <p>Two years ago, over a coffee I couldn't tell you the name of. I saw her, and I stopped hearing anything else in the room. That was that.</p>
+        </div>
+      </article>
+
+      <article class="chapter chapter--reverse reveal">
+        <div class="chapter__media">
+          <img src="chapter-falling.jpg" alt="Sakhi and Saba laughing together" loading="lazy">
+        </div>
+        <div class="chapter__text">
+          <p class="chapter__label">Not leaving it to chance</p>
+          <h3>The Match</h3>
+          <p>We matched on Muzz. I swiped right and then couldn't sit still — found her on Instagram and slid into her DMs before she'd even opened the app. Some things you don't leave up to an algorithm.</p>
+        </div>
+      </article>
+
+      <article class="chapter reveal">
+        <div class="chapter__media">
+          <img src="chapter-connect.jpg" alt="Sakhi and Saba together at the beach" loading="lazy">
+        </div>
+        <div class="chapter__text">
+          <p class="chapter__label">Falling</p>
+          <h3>The Little Things</h3>
+          <p>The camel meat your mom cooked, fed to me by your hands. Your fried rice. Your orange chicken. A spa day just for us. I fell for you in a hundred small moments before I could even say it out loud.</p>
+        </div>
+      </article>
+
+      <article class="chapter chapter--reverse reveal">
+        <div class="chapter__media">
+          <img src="chapter-proposal.jpg" alt="The proposal, under a neon sign that reads Will You Marry Me" loading="lazy">
+        </div>
+        <div class="chapter__text">
+          <p class="chapter__label">The question</p>
+          <h3>Will You Marry Me</h3>
+          <p>Roses, your favourite lights, and a question I already knew the answer to — I just needed to ask it out loud, in front of the whole world if it would've let me.</p>
+        </div>
+      </article>
+
+      <article class="chapter reveal">
+        <div class="chapter__media">
+          <img src="chapter-wedding.jpg" alt="Sakhi and Saba on their wedding day, in red and gold" loading="lazy">
+        </div>
+        <div class="chapter__text">
+          <p class="chapter__label">Forever, officially</p>
+          <h3>June 14th</h3>
+          <p>Red and gold, your whole family in one room, and you laughing at something only we understood. I married my best friend that day, and I'd do it again every single year.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ THE LITTLE THINGS ============ -->
+  <section class="little-things" id="little-things">
+    <div class="section-head reveal">
+      <span class="ornament" aria-hidden="true">&#10086;</span>
+      <p class="eyebrow">the little things</p>
+      <h2>What I Never Want to Forget</h2>
+    </div>
+
+    <div class="notes">
+      <div class="note reveal"><p>The camel meat your mom cooked, fed to me by your hands.</p></div>
+      <div class="note reveal"><p>Your fried rice. Your orange chicken. Effortless, every time.</p></div>
+      <div class="note reveal"><p>Our spa day — just us, no phones, no rush.</p></div>
+      <div class="note reveal"><p>Picking out your shaadi saree together.</p></div>
+      <div class="note reveal"><p>The quiet evenings we stole, waiting for the house to go still.</p></div>
+      <div class="note reveal"><p>You, waking up early just to make me matcha.</p></div>
+      <div class="note reveal"><p>The way your whole face lights up over the smallest gift.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ LET'S MAKE PLANS ============ -->
+  <section class="plans" id="plans">
+    <div class="section-head reveal">
+      <span class="ornament" aria-hidden="true">&#10086;</span>
+      <p class="eyebrow">one more idea</p>
+      <h2>Let's Make Plans</h2>
+      <p class="plans__intro">Pick a day. Pick a thing. I'll clear my schedule.</p>
+    </div>
+
+    <div class="plans__card reveal">
+      <div class="plans__body" id="plansBody">
+        <div class="plans__step">
+          <p class="plans__label">01 — pick a date</p>
+          <input type="date" id="planDate" class="plans__date" aria-label="Pick a date">
+        </div>
+
+        <div class="plans__step">
+          <p class="plans__label">02 — pick a thing</p>
+          <div class="plans__choices" id="planChoices">
+            <button class="plan-chip" type="button" data-activity="Dinner date">Dinner date</button>
+            <button class="plan-chip" type="button" data-activity="Movie night">Movie night</button>
+            <button class="plan-chip" type="button" data-activity="Coffee &amp; a walk">Coffee &amp; a walk</button>
+            <button class="plan-chip" type="button" data-activity="Picnic">Picnic</button>
+            <button class="plan-chip" type="button" data-activity="Mini golf">Mini golf</button>
+            <button class="plan-chip" type="button" data-activity="Surprise me">Surprise me</button>
+          </div>
+        </div>
+
+        <button class="lock-btn" id="lockPlanBtn" type="button" disabled>Lock it in</button>
+      </div>
+
+      <div class="plans__result" id="plansResult">
+        <p class="plans__result-eyebrow">it's a date</p>
+        <p class="plans__result-date" id="resultDate"></p>
+        <p class="plans__result-activity" id="resultActivity"></p>
+        <button class="plan-reset" id="planReset" type="button">Plan something else</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery" id="gallery">
+    <div class="section-head reveal">
+      <span class="ornament" aria-hidden="true">&#10086;</span>
+      <p class="eyebrow">scrapbook</p>
+      <h2>Us, Everywhere</h2>
+    </div>
+
+    <div class="gallery__grid">
+      <button class="gallery__item reveal" data-full="gallery-1.jpg" type="button" aria-label="Enlarge photo: our first winter together">
+        <span class="gallery__photo"><img src="gallery-1.jpg" alt="Sakhi and Saba at an ice festival" loading="lazy"></span>
+        <span class="gallery__caption">Our first winter together</span>
+      </button>
+      <button class="gallery__item reveal" data-full="gallery-3.jpg" type="button" aria-label="Enlarge photo: chasing the tide, Thailand">
+        <span class="gallery__photo"><img src="gallery-3.jpg" alt="Sakhi and Saba on a beach trip" loading="lazy"></span>
+        <span class="gallery__caption">Chasing the tide, Thailand</span>
+      </button>
+      <button class="gallery__item reveal" data-full="gallery-2.jpg" type="button" aria-label="Enlarge photo: game night, best two out of three">
+        <span class="gallery__photo"><img src="gallery-2.jpg" alt="Sakhi and Saba on game night" loading="lazy"></span>
+        <span class="gallery__caption">Game night — best two out of three</span>
+      </button>
+      <button class="gallery__item reveal" data-full="gallery-4.jpg" type="button" aria-label="Enlarge photo: a lazy morning we didn't want to end">
+        <span class="gallery__photo"><img src="gallery-4.jpg" alt="Sakhi and Saba, a lazy morning" loading="lazy"></span>
+        <span class="gallery__caption">A morning we didn't want to end</span>
+      </button>
+      <button class="gallery__item reveal" data-full="gallery-5.jpg" type="button" aria-label="Enlarge photo: the blue lagoon, Krabi">
+        <span class="gallery__photo"><img src="gallery-5.jpg" alt="Saba at the beach in Thailand" loading="lazy"></span>
+        <span class="gallery__caption">The blue lagoon, Krabi</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ THE LETTER ============ -->
+  <section class="letter" id="letter">
+    <div class="letter__media"></div>
+    <div class="letter__scrim"></div>
+    <div class="embers" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="letter__content reveal">
+      <p class="eyebrow">for you</p>
+      <h2>One More Thing</h2>
+
+      <button class="seal-btn" id="sealBtn" type="button">
+        <span class="seal-btn__seal" aria-hidden="true"></span>
+        <span>Open the letter</span>
+      </button>
+
+      <div class="letter__note" id="letterNote">
+        <p class="letter__message">mujhey tumsey itna pyaar hai ki is ishq mai main barbaad honey ke liye tayaar hoo, tum laakhon mai ek ho, tumhaare ilaava mere koi nai</p>
+        <p class="letter__signature">— Sakhi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section class="countdown" id="countdown">
+    <div class="section-head reveal">
+      <span class="ornament" aria-hidden="true">&#10086;</span>
+      <p class="eyebrow">until then</p>
+      <h2>Our Next Anniversary</h2>
+      <p class="countdown__date">June 14th</p>
+    </div>
+
+    <div class="countdown__grid reveal" id="countdownGrid">
+      <div class="countdown__unit"><span class="countdown__num" id="cdDays">–</span><span class="countdown__label">days</span></div>
+      <div class="countdown__unit"><span class="countdown__num" id="cdHours">–</span><span class="countdown__label">hours</span></div>
+      <div class="countdown__unit"><span class="countdown__num" id="cdMins">–</span><span class="countdown__label">minutes</span></div>
+      <div class="countdown__unit"><span class="countdown__num" id="cdSecs">–</span><span class="countdown__label">seconds</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING ============ -->
+  <footer class="closing">
+    <p class="closing__line">Every version of me chooses every version of you.</p>
+    <p class="closing__signature">Always, Sakhi</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
